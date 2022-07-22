@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>tic tac toe</title>
+  </head>
+  <body>
+    <header><h1>Tic Tac Toe</h1></header>
+    <div id="game-container">
+      <div id="container">
+        <div id="box1" class="hover"></div>
+        <div id="box2" class="hover"></div>
+        <div id="box3" class="hover"></div>
+        <div id="box4" class="hover"></div>
+        <div id="box5" class="hover"></div>
+        <div id="box6" class="hover"></div>
+        <div id="box7" class="hover"></div>
+        <div id="box8" class="hover"></div>
+        <div id="box9" class="hover"></div>
+      </div>
+      <div class="game-info">
+        <div id="timer">00:00:00</div>
+        <div class="welcome">
+          <h1>Welcome</h1>
+          <h2>Turn of player-X</h2>
+        </div>
+
+        <div class="score-board">
+          <div class="player-X">
+            <div id="XName"></div>
+            <div id="score-X">0</div>
+          </div>
+          <div class="player-O">
+            <div id="OName"></div>
+            <div id="score-O">0</div>
+          </div>
+          <div class="tie">
+            <div class="x">Tie</div>
+            <div id="score-tie">0</div>
+          </div>
+        </div>
+        <div class="reset-btn">
+          <button
+            id="reset"
+            onclick="ClearBox(),ClearIndex(),DisplayPlayer(),timerStart();"
+          >
+            Restart Game
+          </button>
+          <button id="View_previous" onclick="leaderBoard()">
+            Previous Scores
+          </button>
+        </div>
+      </div>
+      <div id="board">
+        <div id="cross">
+          <img
+            src="./assets/images/icons8-cross-mark-48.png"
+            alt="#"
+            id="cross_img"
+          />
+        </div>
+        <div id="top">Previous scores</div>
+        <div id="bottom">
+          <div id="prescoreX"></div>
+          <div id="prescoreO"></div>
+          <div id="prescoreTie"></div>
+          <div id="roundTime"></div>
+        </div>
+      </div>
+    </div>
+    <div id="popup">
+      <div style="color: white"></div>
+      <div class="input">
+        <input
+          type="text"
+          placeholder="Enter the name of player-1"
+          id="playerXName"
+        />
+        <input
+          type="text"
+          placeholder="Enter the name of player-2"
+          id="playerOName"
+        />
+        <button id="submit-name" onclick="renderPreviousData(),timerStart();">
+          Play Now
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="./assets/js/script.js"></script>
